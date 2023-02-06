@@ -1,0 +1,22 @@
+@import './lib/fonts.scss';
+@import './lib/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black-color);
+  font-family: 'Proxima Nova ', sans-serif;
+  font-family: 'Space Mono ', monospace;
+}
+
+.text {
+  color: var(--yellow-color);
+}
+
+.text1 {
+  color: var(--white-color);
+}
