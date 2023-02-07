@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.link,
+.link_active {
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 1px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 10px 30px;
+  width: 230px;
+  text-align: center;
+  border-top: 1px solid transparent;
+}
+.link_active {
+  border: none;
+  border-top: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  background-color: var(--black-color);
+}

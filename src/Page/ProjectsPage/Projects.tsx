@@ -1,3 +1,5 @@
+import { Layout } from '../../Layout/Layout';
+
 export const Projects = () => {
-  return <div>Projects</div>;
+  return <Layout>Projects</Layout>;
 };
