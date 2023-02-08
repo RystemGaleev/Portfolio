@@ -1,6 +1,6 @@
 import style from './Markup.module.scss';
 
-const num = Array.from({ length: 22 }, (v, k) => k + 1);
+const num = Array.from({ length: 26 }, (v, k) => k + 1);
 export const Markup = () => {
   return (
     <ul className={style.markup}>

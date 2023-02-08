@@ -30,11 +30,11 @@ const AnimationRightX = {
 };
 const AnimationTopY = {
   show: { opacity: 1, y: 0 },
-  hidden: { opacity: 0, y: -300 },
+  hidden: { opacity: 0, y: 300 },
 };
 const AnimationBottomY = {
   show: { opacity: 1, y: 0 },
-  hidden: { opacity: 0, y: 300 },
+  hidden: { opacity: 0, y: -300 },
 };
 const AnimationOpacity = {
   show: { opacity: 1 },
@@ -46,6 +46,11 @@ const AnimationScale = {
   hidden: { opacity: 0, scale: 0 },
 };
 
+const AnimationScaleLeftX = {
+  show: { opacity: 1, scale: 1, x: 0 },
+  hidden: { opacity: 0, scale: 0, x: -700 },
+};
+
 export {
   AnimationBottomY,
   AnimationTopY,
@@ -55,4 +60,5 @@ export {
   AnimationOpacity,
   AnimationContainerLong,
   AnimationScale,
+  AnimationScaleLeftX,
 };
