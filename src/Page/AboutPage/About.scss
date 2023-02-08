@@ -1,0 +1,25 @@
+.about {
+  padding-top: 100px;
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  &__column {
+    max-width: 600px;
+    &-descr {
+      line-height: 30px;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--grey-color);
+      span {
+        background-color: var(--accent-color);
+        width: 100%;
+        display: block;
+        color: var(--detail-color);
+        padding: 0 10px;
+        font-weight: 500;
+      }
+    }
+  }
+}

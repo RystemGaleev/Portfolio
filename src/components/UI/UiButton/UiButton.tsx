@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import './UiButton.scss';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
+import { AnimationOpacity } from '../../../Animation/Animation';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -18,7 +20,8 @@ export const UiButton: FC<ButtonProps> = ({
   ...props
 }) => {
   return (
-    <button
+    <motion.button
+      variants={AnimationOpacity}
       onClick={onClick}
       {...props}
       className={clsx('btn', {
@@ -26,6 +29,6 @@ export const UiButton: FC<ButtonProps> = ({
       })}
     >
       {children}
-    </button>
+    </motion.button>
   );
 };

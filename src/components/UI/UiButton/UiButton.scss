@@ -20,10 +20,10 @@
     height: 100%;
     opacity: 0;
     transition: all 0.5s;
-    box-shadow: 0 0 10px 40px var(--yellow-color);
+    box-shadow: 0 0 10px 40px var(--accent-color);
   }
   &:active:after {
-    box-shadow: 0 0 0 0 var(--yellow-color);
+    box-shadow: 0 0 0 0 var(--accent-color);
     position: absolute;
     border-radius: 6px;
     left: 0;
@@ -65,11 +65,11 @@
     color: var(--detail-color);
 
     &:hover {
-      background-color: var(--yellow-color);
-      box-shadow: 4px 4px 10px 2px var(--yellow-color);
+      background-color: var(--accent-color);
+      box-shadow: 4px 4px 10px 2px var(--accent-color);
     }
     &:active {
-      background-color: var(--yellow-color);
+      background-color: var(--accent-color);
       background-position: 10px 20px;
     }
   }

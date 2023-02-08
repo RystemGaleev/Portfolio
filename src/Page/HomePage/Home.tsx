@@ -1,6 +1,12 @@
 import { Layout } from '../../Layout/Layout';
 import { TagSphere } from 'react-tag-sphere';
 import { UiButton } from '../../components/UI/UiButton/UiButton';
+import {
+  AnimationRightX,
+  AnimationLeftX,
+  AnimationContainer,
+} from '../../Animation/Animation';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 import './Home.scss';
@@ -39,22 +45,37 @@ export const Home = () => {
       <main className="main">
         <div className="container">
           <div className="main__wrapper">
-            <div className="main__block">
-              <div className="subtitle">
+            <motion.div
+              className="main__block"
+              variants={AnimationContainer}
+              initial="hidden"
+              animate="show"
+            >
+              <motion.div variants={AnimationLeftX} className="subtitle">
                 Hello! <span>I am</span>
-              </div>
-              <h1 className="main__block-title">Rustem </h1>
-              <p className="main__block-text">Front - end developer</p>
-              <div className="main__block-descr">
+              </motion.div>
+              <motion.h1
+                variants={AnimationRightX}
+                className="main__block-title"
+              >
+                Rustem
+              </motion.h1>
+              <motion.p variants={AnimationLeftX} className="main__block-text">
+                Front - end developer
+              </motion.p>
+              <motion.div
+                variants={AnimationRightX}
+                className="main__block-descr"
+              >
                 This is my portfolio , where you can view my projects , learn
                 about me and my technology stack
-              </div>
+              </motion.div>
               <div className="main__block-button">
                 <UiButton onClick={toggleStack} variant="primary" size="lg">
                   {skills ? 'Hide stack' : 'View stack'}
                 </UiButton>
               </div>
-            </div>
+            </motion.div>
             <div className="main__skills">
               {skills && skills ? (
                 <TagSphere
@@ -69,7 +90,7 @@ export const Home = () => {
                   tags={tags}
                 />
               ) : (
-                <div className="main__skills-sphere"></div>
+                <div className="main__contacts"></div>
               )}
             </div>
           </div>

@@ -16,17 +16,17 @@ export const Navbar = () => {
         className={({ isActive }) =>
           isActive ? style.link_active : style.link
         }
-        to="/projects"
+        to="/about"
       >
-        _projects
+        _about me
       </NavLink>
       <NavLink
         className={({ isActive }) =>
           isActive ? style.link_active : style.link
         }
-        to="/someone"
+        to="/projects"
       >
-        _someone
+        _projects
       </NavLink>
     </div>
   );
