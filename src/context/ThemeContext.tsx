@@ -6,7 +6,7 @@ interface IThemeContext {
 }
 
 interface IPropsTheme {
-  children?: ReactNode;
+  children: ReactNode;
 }
 
 export const ThemeContext = createContext<IThemeContext | null>(null);

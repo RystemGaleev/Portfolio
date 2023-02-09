@@ -1,0 +1,25 @@
+.card {
+  width: calc(33.33% - 20px);
+  border: 1px solid var(--grey-opacity-color);
+  border-radius: var(--rad);
+}
+
+.img {
+  width: 100%;
+  height: 180px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 6px 6px 0 0;
+}
+.title {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.block {
+  margin: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

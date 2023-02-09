@@ -1,0 +1,8 @@
+.projects {
+  padding-top: 80px;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}

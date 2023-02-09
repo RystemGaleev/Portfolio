@@ -3,9 +3,12 @@ import { Layout } from '../../Layout/Layout';
 import { motion } from 'framer-motion';
 import {
   AnimationContainerLong,
+  AnimationContainerFast,
   AnimationContainer,
   AnimationScale,
   AnimationScaleLeftX,
+  AnimationPage,
+  PageTranstition,
 } from '../../Animation/Animation';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { FaFolderOpen, FaReact } from 'react-icons/fa';
@@ -15,7 +18,14 @@ import './About.scss';
 export const About = () => {
   return (
     <Layout>
-      <section className="about">
+      <motion.section
+        initial="exit"
+        animate="show"
+        exit="exit"
+        transition={PageTranstition}
+        variants={AnimationPage}
+        className="about"
+      >
         <div className="container">
           <div className="about__wrapper">
             <div className="about__column-left">
@@ -24,7 +34,7 @@ export const About = () => {
                 src &gt; pages &gt; about
               </h2>
               <motion.div
-                variants={AnimationContainer}
+                variants={AnimationContainerFast}
                 initial="hidden"
                 animate="show"
                 className="about__folders"
@@ -155,7 +165,7 @@ export const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </Layout>
   );
 };

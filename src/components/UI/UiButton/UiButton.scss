@@ -13,7 +13,7 @@
     content: '';
     display: block;
     position: absolute;
-    border-radius: 6px;
+    border-radius: var(--rad);
     left: 0;
     top: 0;
     width: 100%;
@@ -25,7 +25,7 @@
   &:active:after {
     box-shadow: 0 0 0 0 var(--accent-color);
     position: absolute;
-    border-radius: 6px;
+    border-radius: var(--rad);
     left: 0;
     top: 0;
     opacity: 1;
@@ -39,24 +39,27 @@
   &-sm {
     height: 44px;
     min-width: 160px;
+    max-width: 200px;
   }
   &-md {
     height: 50px;
     min-width: 180px;
+    max-width: 220px;
   }
   &-lg {
     height: 56px;
     min-width: 220px;
+    max-width: 260px;
   }
 
   &-outlined {
-    border: 1px solid var(--yellow-color);
+    border: 1px solid var(--accent-color);
     background-color: transparent;
-    color: var(--white-color);
+    color: var(--text-color);
     &:hover {
-      background-color: var(--yellow-color);
-      color: var(--black-color);
-      box-shadow: 4px 4px 10px 2px var(--yellow-color);
+      background-color: var(--accent-color);
+      color: var(--detail-color);
+      box-shadow: 4px 4px 10px 2px var(--accent-color);
     }
   }
 

@@ -1,10 +1,13 @@
 import { Layout } from '../../Layout/Layout';
 import { TagSphere } from 'react-tag-sphere';
-import { UiButton } from '../../components/UI/UiButton/UiButton';
+import { MButton } from '../../components/UI/UiButton/UiButton';
 import {
   AnimationRightX,
   AnimationLeftX,
   AnimationContainer,
+  PageTranstition,
+  AnimationPage,
+  AnimationRotate,
 } from '../../Animation/Animation';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -42,7 +45,14 @@ export const Home = () => {
   };
   return (
     <Layout>
-      <main className="main">
+      <motion.main
+        initial="exit"
+        animate="show"
+        exit="exit"
+        transition={PageTranstition}
+        variants={AnimationPage}
+        className="main"
+      >
         <div className="container">
           <div className="main__wrapper">
             <motion.div
@@ -60,7 +70,7 @@ export const Home = () => {
               >
                 Rustem
               </motion.h1>
-              <motion.p variants={AnimationLeftX} className="main__block-text">
+              <motion.p variants={AnimationRotate} className="main__block-text">
                 Front - end developer
               </motion.p>
               <motion.div
@@ -71,9 +81,9 @@ export const Home = () => {
                 about me and my technology stack
               </motion.div>
               <div className="main__block-button">
-                <UiButton onClick={toggleStack} variant="primary" size="lg">
+                <MButton onClick={toggleStack} variant="primary" size="lg">
                   {skills ? 'Hide stack' : 'View stack'}
-                </UiButton>
+                </MButton>
               </div>
             </motion.div>
             <div className="main__skills">
@@ -95,7 +105,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-      </main>
+      </motion.main>
     </Layout>
   );
 };

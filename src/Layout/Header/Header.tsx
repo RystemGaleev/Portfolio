@@ -1,15 +1,14 @@
-import style from './Header.module.scss';
-import { Navbar } from '../../components/Navbar/Navbar';
-import { FaTelegram } from 'react-icons/fa';
+import { useContext, useState } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
-import { useContext } from 'react';
-import { CiDark, CiLight } from 'react-icons/ci';
+import { Navbar } from '../../components/Navbar/Navbar';
+import style from './Header.module.scss';
 
 export const Header = () => {
-  const { toggleTheme } = useContext(ThemeContext) || {
+  const { theme, toggleTheme } = useContext(ThemeContext) || {
     theme: 'default',
     toggleTheme: () => {},
   };
+
   return (
     <div className={style.header}>
       <div className="container">
@@ -20,7 +19,8 @@ export const Header = () => {
               <input
                 className={style.checkbox}
                 type="checkbox"
-                onClick={toggleTheme}
+                checked={theme === 'dark' ? true : false}
+                onChange={toggleTheme}
               />
               <span className={style.slider}></span>
             </label>
