@@ -1,5 +1,4 @@
 import style from './ProjectCard.module.scss';
-import furniture from '../../assets/img/furniture.jpg';
 import { UiButton } from '../UI/UiButton/UiButton';
 import { motion } from 'framer-motion';
 import { IProjectProps } from '../../Interface';

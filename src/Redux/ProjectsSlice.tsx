@@ -12,9 +12,7 @@ export const fetchProjects = createAsyncThunk<
   undefined,
   { rejectValue: string }
 >('projects/fetchProjects', async (_, { rejectWithValue }) => {
-  const response = await fetch(
-    `https://63ac2eb7cf281dba8c35cb75.mockapi.io/portfolio`,
-  );
+  const response = await fetch(import.meta.env.VITE_PROJECTS_API);
   if (!response.ok) {
     return rejectWithValue('sever Error!');
   }
