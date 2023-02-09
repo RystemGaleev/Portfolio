@@ -32,8 +32,7 @@ export const PROJECTS = [
     id: 5,
     link: 'https://github.com/RystemGaleev/furniture-store',
     title: 'Online furniture store',
-    descr:
-      'Spa app - Online furniture store with favorites page, shopping cart, authorization, multilingualism, notifications, etc.',
+    descr: 'Spa app ',
     image: 'https://i.postimg.cc/XYBf4SsY/furniture.jpg',
   },
   {

@@ -1,3 +1,7 @@
+import { useAppDispatch, useAppSelector } from '../../hook/reduxHook';
+import { useEffect } from 'react';
+import { fetchProjects } from '../../Redux/ProjectsSlice';
+
 import {
   AnimationPage,
   PageTranstition,
@@ -5,13 +9,20 @@ import {
   AnimationProjectCardLeft,
   AnimationProjectCardRight,
 } from '../../Animation/Animation';
-import { MProjectCard } from '../../components/ProjectCard/ProjectCard';
-import { PROJECTS } from '../../data';
-import { Layout } from '../../Layout/Layout';
 import { motion } from 'framer-motion';
+
+import { MProjectCard } from '../../components/ProjectCard/ProjectCard';
+import { Layout } from '../../Layout/Layout';
 import './Projects.scss';
 
 export const Projects = () => {
+  const dispatch = useAppDispatch();
+  const { projects } = useAppSelector((state) => state.projects);
+
+  useEffect(() => {
+    dispatch(fetchProjects());
+  }, [dispatch]);
+
   return (
     <Layout>
       <motion.section
@@ -29,7 +40,7 @@ export const Projects = () => {
             initial="hidden"
             animate="show"
           >
-            {PROJECTS.map((item, index) => (
+            {projects.map((item, index) => (
               <MProjectCard
                 variants={
                   index % 2 === 0
