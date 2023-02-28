@@ -1,14 +1,9 @@
 import { NavLink } from 'react-router-dom';
+import style from './NavbarMobile.module.scss';
+import { NavigationLink } from './Navbar';
 import { ThemeSwitch } from '../UI/ThemeSwitch/ThemeSwitch';
-import style from './Navbar.module.scss';
 
-export const NavigationLink = [
-  { path: '/', title: '_home' },
-  { path: '/about', title: '_about me' },
-  { path: '/projects', title: '_projects' },
-];
-
-export const Navbar = () => {
+export const NavbarMobile = () => {
   return (
     <nav className={style.navbar}>
       <div className={style.links}>
@@ -18,6 +13,7 @@ export const Navbar = () => {
           </NavLink>
         ))}
       </div>
+
       <ThemeSwitch />
     </nav>
   );

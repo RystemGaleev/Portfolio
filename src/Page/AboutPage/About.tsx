@@ -12,7 +12,7 @@ import {
 } from '../../Animation/Animation';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { FaFolderOpen, FaReact } from 'react-icons/fa';
-import { SiPrettier, SiGit, SiNodedotjs, SiVite } from 'react-icons/si';
+import { SiPrettier, SiGit, SiNodedotjs, SiVite, SiReact } from 'react-icons/si';
 import './About.scss';
 
 const folderList = [
@@ -54,57 +54,36 @@ export const About = () => {
                 <MdOutlineKeyboardArrowDown size={24} />
                 src &gt; pages &gt; about
               </h2>
-              <motion.div
-                variants={AnimationContainerFast}
-                initial="hidden"
-                animate="show"
-                className="about__folders"
-              >
+              <motion.div variants={AnimationContainerFast} initial="hidden" animate="show" className="about__folders">
                 {folderList.map((item, index) => (
-                  <MFolder
-                    variants={AnimationScaleLeftX}
-                    custom={index}
-                    key={item.label}
-                    {...item}
-                  />
+                  <MFolder variants={AnimationScaleLeftX} custom={index} key={item.label} {...item} />
                 ))}
               </motion.div>
             </div>
             <div className="about__column-right">
-              <div className="about__header"></div>
+              <div className="about__header">
+                <div className="about__header-title">
+                  <SiReact size={22} />
+                  About.tsx
+                </div>
+              </div>
 
               <div className="about__block-descr">
                 <Markup />
                 <div className="about__column">
-                  <motion.div
-                    className="about__column-descr"
-                    variants={AnimationContainerLong}
-                    initial="hidden"
-                    animate="show"
-                  >
+                  <motion.div className="about__column-descr" variants={AnimationContainerLong} initial="hidden" animate="show">
                     /* <br />
-                    <motion.span variants={AnimationScale}>
-                      &lt;h2&gt; About me &lt;/h2&gt;
-                    </motion.span>
-                    * My name is Rustem. I am from the Republic of Tatarstan -
-                    Russia, the city of Kazan <br />
-                    * Mastered html css js well and continued to work as a
-                    freelancer, after which he began collaborating with several
-                    companies on outstaff <br />* After that, I started
-                    regularly studying react, redux-toolkit, typescript, various
-                    libraries and animations, and improving my skills
-                    <motion.span variants={AnimationScale}>
-                      &lt;h2&gt; Hard skills &lt;/h2&gt;
-                    </motion.span>
-                    HTML, CSS, BEM, SCSS ,Cross-browser layout, Adaptive layout,
-                    JavaScript , TypeScript, React, Redux-toolkit, React-Router,
-                    Framer-motion, Hook-form, i18next, Rest Api, Gulp, Vite,
-                    GitHub, Git, Figma, npm, yarn and other library
-                    <motion.span variants={AnimationScale}>
-                      &lt;h2&gt; Soft skills &lt;/h2&gt;
-                    </motion.span>
-                    Organization and planning of working hours, analytical
-                    thinking, ability to learn and develop, communication
+                    <motion.span variants={AnimationScale}>&lt;h2&gt; About me &lt;/h2&gt;</motion.span>
+                    * My name is Rustem. I am from the Republic of Tatarstan - Russia, the city of Kazan <br />
+                    * Mastered html css js well and continued to work as a freelancer, after which he began collaborating with
+                    several companies on outstaff <br />* After that, I started regularly studying react, redux-toolkit,
+                    typescript, various libraries and animations, and improving my skills
+                    <motion.span variants={AnimationScale}>&lt;h2&gt; Hard skills &lt;/h2&gt;</motion.span>
+                    HTML, CSS, BEM, SCSS ,Cross-browser layout, Adaptive layout, JavaScript , TypeScript, React, Redux-toolkit,
+                    React-Router, Framer-motion, Hook-form, i18next, Rest Api, Gulp, Vite, GitHub, Git, Figma, npm, yarn and other
+                    library
+                    <motion.span variants={AnimationScale}>&lt;h2&gt; Soft skills &lt;/h2&gt;</motion.span>
+                    Organization and planning of working hours, analytical thinking, ability to learn and develop, communication
                     skills, teamwork, stress-resistant
                     <br /> */
                   </motion.div>

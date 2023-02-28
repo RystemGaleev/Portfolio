@@ -1,3 +1,4 @@
+@import '../../assets/sass/lib/mixin';
 .markup {
   display: flex;
   flex-direction: column;
@@ -8,13 +9,13 @@
     color: var(--grey-color);
     font-family: 'JetBrains Mono', monospace;
     line-height: 30px;
-    &:nth-child(24) {
+    &:nth-last-child(-n + 3) {
       filter: blur(0.6px);
     }
-    &:nth-child(25) {
+    &:nth-last-child(-n + 2) {
       filter: blur(0.8px);
     }
-    &:nth-child(26) {
+    &:last-child {
       filter: blur(1.2px);
     }
   }

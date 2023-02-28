@@ -1,3 +1,4 @@
+@import '../../assets/sass/lib/mixin';
 .footer {
   position: fixed;
   width: 100%;
@@ -24,5 +25,18 @@
   &:last-child {
     width: 200px;
     border-right: 1px solid var(--grey-opacity-color);
+  }
+}
+
+@include md {
+  .wrapper {
+    justify-content: center;
+  }
+}
+@include sm {
+  .link {
+    &:last-child {
+      font-size: 16px;
+    }
   }
 }

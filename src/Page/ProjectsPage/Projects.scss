@@ -1,8 +1,25 @@
+@import '../../assets/sass/lib/mixin';
 .projects {
   padding: 40px 0 120px;
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+  }
+}
+
+@include lg {
+  .projects {
+    &__wrapper {
+      align-items: center;
+    }
+  }
+}
+@include md {
+  .projects {
+    &__wrapper {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
   }
 }

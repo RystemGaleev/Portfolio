@@ -1,3 +1,4 @@
+@import '../../assets/sass/lib/mixin';
 .card {
   width: calc(33.33% - 20px);
   border: 1px solid var(--grey-opacity-color);
@@ -22,4 +23,24 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@include xl {
+  .img {
+    height: 190px;
+  }
+}
+@include lg {
+  .card {
+    width: 330px;
+  }
+}
+@include md {
+  .card {
+    width: 370px;
+  }
+}
+@include sm {
+  .card {
+    width: 300px;
+  }
 }

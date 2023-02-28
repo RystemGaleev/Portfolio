@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=La+Belle+Aurore&family=Poppins:wght@400;500;600;700;800;900&display=swap');
-@import './lib/fonts.scss';
+@import './lib/fonts';
+@import './lib/mixin';
 @import './lib/variables';
 
 * {
@@ -15,6 +16,29 @@ a {
   margin: 0 auto;
   padding: 0 15px;
 }
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+}
+
 body {
   background-color: var(--bg-color);
   font-family: 'La Belle Aurore', cursive;
