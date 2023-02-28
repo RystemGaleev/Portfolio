@@ -68,40 +68,4 @@
     gap: 7px;
     margin-top: 50px;
   }
-  &__folder {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--text-color);
-    &-active {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    &-text {
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--text-color);
-      padding: 5px 0px 5px 40px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background-color: var(--grey-opacity-color);
-    }
-    &.left {
-      padding-left: 30px;
-    }
-  }
-  .icon-folder {
-    &:nth-child(2) {
-      color: var(--accent-color);
-    }
-  }
-  .icon-arrow {
-    &.rotate {
-      transform: rotate(-90deg);
-    }
-  }
 }

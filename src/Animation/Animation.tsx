@@ -24,6 +24,7 @@ const AnimationContainerFast = {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
+      delayChildren: 0.2,
     },
   },
 };
@@ -62,7 +63,7 @@ const AnimationScale = {
 
 const AnimationScaleLeftX = {
   show: { opacity: 1, scale: 1, x: 0 },
-  hidden: { opacity: 0, scale: 0, x: -700 },
+  hidden: { opacity: 0, scale: 0, x: -100 },
 };
 
 const AnimationProjectContainer = {
@@ -76,12 +77,12 @@ const AnimationProjectContainer = {
 };
 
 const AnimationProjectCardLeft = {
-  show: { opacity: 1, x: 0, rotate: 0 },
-  hidden: { opacity: 0, x: -600, rotate: 70 },
+  show: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, x: -400 },
 };
 const AnimationProjectCardRight = {
-  show: { opacity: 1, y: 0, rotate: 0 },
-  hidden: { opacity: 0, y: -600, rotate: 70 },
+  show: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 400 },
 };
 
 const AnimationPage = {

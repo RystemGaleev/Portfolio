@@ -1,0 +1,26 @@
+.folder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-color);
+  &:nth-last-child(-n + 4) {
+    padding-left: 32px;
+  }
+}
+.file {
+  display: flex;
+  gap: 10px;
+  color: var(--text-color);
+}
+.icon-folder {
+  &:nth-child(2) {
+    color: var(--accent-color);
+  }
+}
+.icon_arrow {
+  &.rotate {
+    transform: rotate(-90deg);
+  }
+}

@@ -5,8 +5,8 @@ import { IProjectProps } from '../../Interface';
 import { forwardRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const ProjectCard = forwardRef(
-  ({ id, title, image }: IProjectProps, ref: any) => {
+export const ProjectCard = forwardRef<HTMLDivElement, IProjectProps>(
+  ({ id, title, image }, ref) => {
     const navigate = useNavigate();
     const redirectToProject = () => {
       navigate(`/portfolio/${id}`);

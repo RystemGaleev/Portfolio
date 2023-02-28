@@ -22,6 +22,7 @@
   font-weight: 400;
   color: var(--white-color);
   &:last-child {
+    width: 200px;
     border-right: 1px solid var(--grey-opacity-color);
   }
 }

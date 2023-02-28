@@ -1,0 +1,49 @@
+.img {
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+  outline: none;
+  border-radius: 12px;
+  border: 3px solid var(--accent-color);
+  cursor: zoom-in;
+}
+
+.wrapper {
+  position: fixed;
+  width: 400px;
+  height: 220px;
+  z-index: 0;
+  transition: all 0.4s ease-in-out;
+  &:nth-child(2) {
+    top: 350px;
+  }
+  &:nth-child(3) {
+    top: 600px;
+  }
+
+  .normal {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--grey-opacity-color);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+
+  .zooming {
+    position: absolute;
+    cursor: zoom-out;
+    top: 50%;
+    left: 50%;
+    width: 70vw;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -3,8 +3,7 @@ import { IProjectProps } from '../Interface';
 
 interface ProjectState {
   projects: IProjectProps[];
-  loading: boolean;
-  error: string | null;
+  status: string;
 }
 
 export const fetchProjects = createAsyncThunk<
@@ -21,10 +20,14 @@ export const fetchProjects = createAsyncThunk<
   return data;
 });
 
+export const STATUSES = Object.freeze({
+  IDLE: 'idle',
+  ERROR: 'error',
+  LOADING: 'loading',
+});
 const initialState: ProjectState = {
   projects: [],
-  loading: false,
-  error: null,
+  status: STATUSES.IDLE,
 };
 
 const projectsSlice = createSlice({
@@ -33,17 +36,15 @@ const projectsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchProjects.pending, (state) => {
-      state.loading = true;
-      state.error = null;
+      state.status = STATUSES.LOADING;
     });
     builder.addCase(fetchProjects.fulfilled, (state, action) => {
       state.projects = action.payload;
-      state.loading = false;
+      state.status = STATUSES.IDLE;
     });
-    // builder.addCase(fetchMusic.rejected, (state, action) => {
-    //   state.loading = false;
-    //   state.error = action.payload.error;
-    // });
+    builder.addCase(fetchProjects.rejected, (state, action) => {
+      state.status = STATUSES.ERROR;
+    });
   },
 });
 

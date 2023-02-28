@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from '../../hook/reduxHook';
 import { useEffect } from 'react';
-import { fetchProjects } from '../../Redux/ProjectsSlice';
+import { fetchProjects, STATUSES } from '../../Redux/ProjectsSlice';
 
 import {
   AnimationPage,
@@ -14,14 +14,24 @@ import { motion } from 'framer-motion';
 import { MProjectCard } from '../../components/ProjectCard/ProjectCard';
 import { Layout } from '../../Layout/Layout';
 import './Projects.scss';
+import { Loader } from '../../components/UI/Loader/Loader';
+import { ErrorMessage } from '../../components/UI/ErrorMessage/ErrorMessage';
 
 export const Projects = () => {
   const dispatch = useAppDispatch();
-  const { projects } = useAppSelector((state) => state.projects);
+  const { projects, status } = useAppSelector((state) => state.projects);
 
   useEffect(() => {
     dispatch(fetchProjects());
   }, [dispatch]);
+
+  if (status === STATUSES.LOADING) {
+    return <Loader />;
+  }
+
+  if (status === STATUSES.ERROR) {
+    return <ErrorMessage />;
+  }
 
   return (
     <Layout>

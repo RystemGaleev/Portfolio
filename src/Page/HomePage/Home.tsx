@@ -1,6 +1,7 @@
-import { Layout } from '../../Layout/Layout';
+import { useState } from 'react';
 import { TagSphere } from 'react-tag-sphere';
 import { MButton } from '../../components/UI/UiButton/UiButton';
+import { Layout } from '../../Layout/Layout';
 import {
   AnimationRightX,
   AnimationLeftX,
@@ -10,7 +11,6 @@ import {
   AnimationRotate,
 } from '../../Animation/Animation';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
 import './Home.scss';
 

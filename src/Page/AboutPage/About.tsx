@@ -1,10 +1,10 @@
 import { Markup } from '../../components/Markup/Markup';
+import { MFolder } from '../../components/Folder/Folder';
 import { Layout } from '../../Layout/Layout';
 import { motion } from 'framer-motion';
 import {
   AnimationContainerLong,
   AnimationContainerFast,
-  AnimationContainer,
   AnimationScale,
   AnimationScaleLeftX,
   AnimationPage,
@@ -14,6 +14,27 @@ import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { FaFolderOpen, FaReact } from 'react-icons/fa';
 import { SiPrettier, SiGit, SiNodedotjs, SiVite } from 'react-icons/si';
 import './About.scss';
+
+const folderList = [
+  {
+    icon: <FaFolderOpen size={22} className="icon-folder " />,
+    label: 'home',
+    arrow: true,
+  },
+  {
+    icon: <FaFolderOpen size={22} color="var(--accent-color)" />,
+    label: 'about',
+    rotate: true,
+    file: <FaReact />,
+    filteTitle: 'About.tsx',
+    arrow: true,
+  },
+  { icon: <FaFolderOpen size={22} />, label: 'projects', arrow: true },
+  { icon: <SiPrettier size={22} />, label: '.prettierrc', arrow: false },
+  { icon: <SiNodedotjs size={22} />, label: 'package.json', arrow: false },
+  { icon: <SiGit size={22} />, label: '.gitignore ', arrow: false },
+  { icon: <SiVite size={22} />, label: ' vite.config.ts', arrow: false },
+];
 
 export const About = () => {
   return (
@@ -39,87 +60,14 @@ export const About = () => {
                 animate="show"
                 className="about__folders"
               >
-                <motion.div
-                  variants={AnimationScaleLeftX}
-                  className="about__folder"
-                >
-                  <MdOutlineKeyboardArrowDown
-                    className="icon-arrow rotate"
-                    size={24}
-                  />
-                  <FaFolderOpen size={22} className="icon-folder " />
-                  home
-                </motion.div>
-                <motion.div
-                  variants={AnimationScaleLeftX}
-                  className="about__folder-active"
-                >
-                  <motion.div
+                {folderList.map((item, index) => (
+                  <MFolder
                     variants={AnimationScaleLeftX}
-                    className="about__folder"
-                  >
-                    <MdOutlineKeyboardArrowDown
-                      className="icon-arrow"
-                      size={24}
-                    />
-                    <FaFolderOpen size={22} className="icon-folder " />
-                    about
-                  </motion.div>
-                  <div className="about__folder-text">
-                    <FaReact size={20} />
-                    About.tsx
-                  </div>
-                </motion.div>
-                <motion.div
-                  variants={AnimationScaleLeftX}
-                  className="about__folder"
-                >
-                  <MdOutlineKeyboardArrowDown
-                    className="icon-arrow rotate"
-                    size={24}
+                    custom={index}
+                    key={item.label}
+                    {...item}
                   />
-                  <FaFolderOpen size={22} className="icon-folder " />
-                  stack
-                </motion.div>
-                <motion.div
-                  variants={AnimationScaleLeftX}
-                  className="about__folder"
-                >
-                  <MdOutlineKeyboardArrowDown
-                    className="icon-arrow rotate"
-                    size={24}
-                  />
-                  <FaFolderOpen size={22} className="icon-folder " />
-                  projects
-                </motion.div>
-                <motion.div
-                  variants={AnimationScaleLeftX}
-                  className="about__folder left"
-                >
-                  <SiPrettier size={20} className="icon-folder " />
-                  .prettierrc
-                </motion.div>
-                <motion.div
-                  variants={AnimationScaleLeftX}
-                  className="about__folder left"
-                >
-                  <SiGit size={20} className="icon-folder " />
-                  .gitignore
-                </motion.div>
-                <motion.div
-                  variants={AnimationScaleLeftX}
-                  className="about__folder left"
-                >
-                  <SiNodedotjs size={20} className="icon-folder " />
-                  package.json
-                </motion.div>
-                <motion.div
-                  variants={AnimationScaleLeftX}
-                  className="about__folder left"
-                >
-                  <SiVite size={20} className="icon-folder " />
-                  vite.config.ts
-                </motion.div>
+                ))}
               </motion.div>
             </div>
             <div className="about__column-right">

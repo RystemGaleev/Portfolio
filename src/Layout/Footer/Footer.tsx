@@ -23,12 +23,12 @@ export const Footer = () => {
             <FaGithub size={30} />
           </a>
           <a
-            href="mailto:2starcraft@list.ru"
+            href="mailto:rystezy@list.ru"
             target="_blank"
             rel="noopener noreferrer"
             className={style.link}
           >
-            Gmail
+            rystezy@list.ru
           </a>
         </div>
       </div>

@@ -6,6 +6,17 @@ export const PROJECTS = [
     descr:
       'Spa app - Online furniture store with favorites page, shopping cart, authorization, multilingualism, notifications, etc.',
     image: 'https://i.postimg.cc/XYBf4SsY/furniture.jpg',
+    screens: [
+      {
+        screen: 'https://i.postimg.cc/1Xq7VsPy/furniture3.jpg',
+      },
+      {
+        screen: 'https://i.postimg.cc/xjJ44ymB/furniture2.jpg',
+      },
+      {
+        screen: 'https://i.postimg.cc/2jsKRbFy/furniture1.jpg',
+      },
+    ],
   },
   {
     id: 2,
