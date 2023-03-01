@@ -11,14 +11,9 @@ i18n
   .init({
     debug: true,
     fallbackLng: 'en',
-    // ns: ['translation'],
-
     interpolation: {
       escapeValue: false,
     },
-    // backend: {
-    //   loadPath: `http://localhost:4000/locales/{{lng}}/{{ns}}.json`,
-    // },
   });
 
 export default i18n;

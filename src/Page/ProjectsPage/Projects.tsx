@@ -12,7 +12,6 @@ import {
   AnimationProjectCardRight,
 } from '../../Animation/Animation';
 import { motion } from 'framer-motion';
-
 import { MProjectCard } from '../../components/ProjectCard/ProjectCard';
 import { Layout } from '../../Layout/Layout';
 import './Projects.scss';
@@ -44,19 +43,10 @@ export const Projects = () => {
         className="projects"
       >
         <div className="container">
-          <motion.div
-            className="projects__wrapper"
-            variants={AnimationProjectContainer}
-            initial="hidden"
-            animate="show"
-          >
+          <motion.div className="projects__wrapper" variants={AnimationProjectContainer} initial="hidden" animate="show">
             {projects.map((item, index) => (
               <MProjectCard
-                variants={
-                  index % 2 === 0
-                    ? AnimationProjectCardLeft
-                    : AnimationProjectCardRight
-                }
+                variants={index % 2 === 0 ? AnimationProjectCardLeft : AnimationProjectCardRight}
                 custom={index}
                 key={item.id}
                 {...item}

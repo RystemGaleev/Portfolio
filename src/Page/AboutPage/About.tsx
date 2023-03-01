@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import { Markup } from '../../components/Markup/Markup';
 import { MFolder } from '../../components/Folder/Folder';
 import { Layout } from '../../Layout/Layout';
 import { motion } from 'framer-motion';
+
 import {
   AnimationContainerLong,
   AnimationContainerFast,
@@ -10,12 +12,10 @@ import {
   AnimationPage,
   PageTranstition,
 } from '../../Animation/Animation';
-
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { FaFolderOpen, FaReact } from 'react-icons/fa';
 import { SiPrettier, SiGit, SiNodedotjs, SiVite, SiReact } from 'react-icons/si';
 import './About.scss';
-import { useTranslation } from 'react-i18next';
 
 const folderList = [
   {
@@ -83,8 +83,7 @@ export const About = () => {
                     React-Router, Framer-motion, Hook-form, i18next, Rest Api, Gulp, Vite, GitHub, Git, Figma, npm, yarn and other
                     library
                     <motion.span variants={AnimationScale}>&lt;h2&gt; Soft skills &lt;/h2&gt;</motion.span>
-                    Organization and planning of working hours, analytical thinking, ability to learn and develop, communication
-                    skills, teamwork, stress-resistant
+                    {t('about.softSkills')}
                     <br /> */
                   </motion.div>
                 </div>

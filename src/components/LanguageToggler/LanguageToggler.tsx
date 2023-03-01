@@ -7,10 +7,8 @@ export const LanguageToggler = () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en');
   };
   return (
-    <div className={style.language_btns}>
-      <button className={style.language} onClick={toggleLang}>
-        {i18n.language === 'en' ? 'EN' : 'RU'}
-      </button>
-    </div>
+    <button className={style.language} onClick={toggleLang}>
+      {i18n.language === 'en' ? 'EN' : 'RU'}
+    </button>
   );
 };

@@ -1,5 +1,6 @@
-import { SetStateAction, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { Layout } from '../../Layout/Layout';
 import { ScreenProject } from '../ScreenProject/ScreenProject';
@@ -11,13 +12,11 @@ import { motion } from 'framer-motion';
 import { PageTranstition, AnimationPage } from '../../Animation/Animation';
 import { IProjectProps } from '../../Interface';
 import style from './SingleProject.module.scss';
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
 
 export const SingleProject = () => {
   const navigate = useNavigate();
-  const language = i18next.language;
-  const {} = useTranslation();
+  const { i18n, t } = useTranslation();
+  const language = i18n.language;
 
   const [status, setStatus] = useState({
     isLoading: false,
@@ -64,20 +63,20 @@ export const SingleProject = () => {
         <div className="container">
           <div className={style.wrapper}>
             <div className={style.column_left}>
-              <div className={style.title}>{language === 'en' ? singleProject.titleRu : singleProject.titleEn}</div>
+              <div className={style.title}>{language === 'ru' ? singleProject.titleRu : singleProject.titleEn}</div>
               <div className={style.links}>
                 <a href={singleProject.link} target="_blank" rel="noopener noreferrer" className={style.link}>
                   GitHub
                 </a>
-                {singleProject.site ? (
+                {singleProject.site && (
                   <a href={singleProject.site} target="_blank" rel="noopener noreferrer" className={style.link}>
                     Visit site
                   </a>
-                ) : null}
+                )}
               </div>
-              <div className={style.descr}>{language === 'en' ? singleProject.descrRu : singleProject.descrEn}</div>
+              <div className={style.descr}>{language === 'ru' ? singleProject.descrRu : singleProject.descrEn}</div>
               <UiButton onClick={() => navigate(-1)} size="sm" variant="outlined">
-                Go back
+                {t('buttons.backBtn')}
               </UiButton>
             </div>
             <div className={style.column_right}>

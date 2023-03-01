@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
+import { LanguageToggler } from '../LanguageToggler/LanguageToggler';
 import { ThemeSwitch } from '../UI/ThemeSwitch/ThemeSwitch';
 import style from './Navbar.module.scss';
 
@@ -19,7 +20,10 @@ export const Navbar = () => {
           </NavLink>
         ))}
       </div>
-      <ThemeSwitch />
+      <div className={style.tools}>
+        <ThemeSwitch />
+        <LanguageToggler />
+      </div>
     </nav>
   );
 };

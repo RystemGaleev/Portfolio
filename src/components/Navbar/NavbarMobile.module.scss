@@ -5,6 +5,12 @@
   flex-direction: column;
   height: 100%;
 }
+.tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
 .title {
   font-size: 18px;
   font-weight: 400;

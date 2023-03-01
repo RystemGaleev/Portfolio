@@ -71,6 +71,10 @@
   }
 }
 @include sm {
+  .title {
+    font-size: 28px;
+    text-align: center;
+  }
   .links {
     justify-content: space-around;
   }

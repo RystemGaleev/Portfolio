@@ -7,11 +7,19 @@
     "btnHide": "Hide stack"
   },
   "about": {
-    "aboutDescription": "My name is Rustem. I am from the Republic of Tatarstan - Russia, the city of Kazan . Mastered html css js well and continued to work as a freelancer, after which he began collaborating with several companies on outstaff . After that, I started regularly studying react, redux-toolkit, typescript, various libraries and animations, and improving my skills"
+    "aboutDescription": "My name is Rustem. I am from the Republic of Tatarstan - Russia, the city of Kazan. I started my career in IT from working as a freelance web designer, worked for about a year, got acquainted with the layout, liked it, started to get deeper, started to work, continued to work freelance, created a layout and made it up myself, continued to study every day, took jobs that were much more difficult, understood what I want to do and he switched completely to fronted, continued to work as a freelancer and began collaborating with several companies. There I developed large projects on react, such as online stores, blogs, multi-pages, landing pages and other projects",
+    "softSkills": "Organization and planning of working hours, analytical thinking, the desire to learn and develop, communication skills, ability to work in a team, stress tolerance"
+  },
+  "notFound": {
+    "descr": "The page was not found, but there are more interesting pages"
   },
   "navbar": {
     "home": "_home",
     "about": "_about me",
     "projects": "_projects"
+  },
+  "buttons": {
+    "cardBtn": "View project",
+    "backBtn": "Back"
   }
 }

@@ -3,6 +3,7 @@ import style from './NavbarMobile.module.scss';
 import { ThemeSwitch } from '../UI/ThemeSwitch/ThemeSwitch';
 import { socialLinks } from '../../Layout/Footer/Footer';
 import { useTranslation } from 'react-i18next';
+import { LanguageToggler } from '../LanguageToggler/LanguageToggler';
 
 export const NavbarMobile = () => {
   const { t } = useTranslation();
@@ -30,7 +31,10 @@ export const NavbarMobile = () => {
           </a>
         ))}
       </div>
-      <ThemeSwitch />
+      <div className={style.tools}>
+        <ThemeSwitch />
+        <LanguageToggler />
+      </div>
     </nav>
   );
 };

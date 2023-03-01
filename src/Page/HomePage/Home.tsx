@@ -1,7 +1,11 @@
 import { useState } from 'react';
+import useMediaQuery from '../../hook/useMediaQuery';
+import { useTranslation } from 'react-i18next';
+
 import { TagSphere } from 'react-tag-sphere';
 import { MButton } from '../../components/UI/UiButton/UiButton';
 import { Layout } from '../../Layout/Layout';
+import { motion } from 'framer-motion';
 import {
   AnimationRightX,
   AnimationLeftX,
@@ -10,11 +14,7 @@ import {
   AnimationPage,
   AnimationRotate,
 } from '../../Animation/Animation';
-import { motion } from 'framer-motion';
-
 import './Home.scss';
-import useMediaQuery from '../../hook/useMediaQuery';
-import { useTranslation } from 'react-i18next';
 
 const tags = [
   'HTML',

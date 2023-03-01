@@ -9,14 +9,16 @@
     color: var(--grey-color);
     font-family: 'JetBrains Mono', monospace;
     line-height: 30px;
-    &:nth-last-child(-n + 3) {
-      filter: blur(0.6px);
-    }
-    &:nth-last-child(-n + 2) {
+    &:nth-last-child(-n + 9) {
       filter: blur(0.8px);
     }
-    &:last-child {
-      filter: blur(1.2px);
+    &:nth-last-child(-n + 3) {
+      filter: blur(1px);
     }
+  }
+}
+@include sm {
+  .markup {
+    display: none;
   }
 }

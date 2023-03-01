@@ -3,7 +3,7 @@ import style from './Markup.module.scss';
 
 export const Markup = () => {
   const matches = useMediaQuery('(max-width: 420px)');
-  const num = Array.from(matches ? { length: 30 } : { length: 26 }, (v, k) => k + 1);
+  const num = Array.from(matches ? { length: 50 } : { length: 35 }, (v, k) => k + 1);
 
   return (
     <ul className={style.markup}>

@@ -3,7 +3,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
 }
 .links {
   display: flex;
@@ -28,11 +28,22 @@
   color: var(--accent-color);
   background-color: var(--black-color);
 }
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
 @include lg {
   .link,
   .link_active {
     width: 180px;
+  }
+  .navbar {
+    gap: 30px;
+  }
+  .tools {
+    gap: 30px;
   }
 }
 @include md {
