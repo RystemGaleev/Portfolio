@@ -13,6 +13,8 @@ import {
 import { motion } from 'framer-motion';
 
 import './Home.scss';
+import useMediaQuery from '../../hook/useMediaQuery';
+import { useTranslation } from 'react-i18next';
 
 const tags = [
   'HTML',
@@ -39,6 +41,8 @@ const tags = [
 
 export const Home = () => {
   const [skills, setSkills] = useState(false);
+  const matches = useMediaQuery('(max-width: 577px)');
+  const { t } = useTranslation();
 
   const toggleStack = () => {
     setSkills((prev) => !prev);
@@ -56,27 +60,34 @@ export const Home = () => {
         <div className="container">
           <div className="main__wrapper">
             <motion.div className="main__block" variants={AnimationContainer} initial="hidden" animate="show">
-              <motion.div variants={AnimationLeftX} className="subtitle">
-                Hello! <span>I am</span>
+              <motion.div variants={AnimationLeftX} className="main__subtitle">
+                {t('main.subtitle')}
               </motion.div>
               <motion.h1 variants={AnimationRightX} className="main__block-title">
-                Rustem
+                {t('main.name')}
               </motion.h1>
+
               <motion.p variants={AnimationRotate} className="main__block-text">
-                Front - end developer
+                Front end developer
               </motion.p>
               <motion.div variants={AnimationRightX} className="main__block-descr">
-                This is my portfolio , where you can view my projects , learn about me and my technology stack
+                {t('main.description')}
               </motion.div>
               <div className="main__block-button">
                 <MButton onClick={toggleStack} variant="primary" size="lg">
-                  {skills ? 'Hide stack' : 'View stack'}
+                  {skills ? t('main.btnHide') : t('main.btnShow')}
                 </MButton>
               </div>
             </motion.div>
             {skills && (
               <div className="main__skills">
-                <TagSphere className="main__skills-tag" fullHeight={true} fullWidth={true} tags={tags} radius={280} />
+                <TagSphere
+                  className="main__skills-tag"
+                  fullHeight={true}
+                  fullWidth={true}
+                  tags={tags}
+                  radius={matches ? 200 : 280}
+                />
               </div>
             )}
           </div>

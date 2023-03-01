@@ -1,0 +1,15 @@
+.language_btns {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.language {
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--white-color);
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  outline: none;
+}

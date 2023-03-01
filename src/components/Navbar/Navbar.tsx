@@ -1,14 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { ThemeSwitch } from '../UI/ThemeSwitch/ThemeSwitch';
 import style from './Navbar.module.scss';
 
-export const NavigationLink = [
-  { path: '/', title: '_home' },
-  { path: '/about', title: '_about me' },
-  { path: '/projects', title: '_projects' },
-];
-
 export const Navbar = () => {
+  const { t } = useTranslation();
+  const NavigationLink = [
+    { path: '/', title: t('navbar.home') },
+    { path: '/about', title: t('navbar.about') },
+    { path: '/projects', title: t('navbar.projects') },
+  ];
   return (
     <nav className={style.navbar}>
       <div className={style.links}>

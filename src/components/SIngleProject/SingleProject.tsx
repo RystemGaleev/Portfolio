@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { SetStateAction, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { Layout } from '../../Layout/Layout';
@@ -11,9 +11,14 @@ import { motion } from 'framer-motion';
 import { PageTranstition, AnimationPage } from '../../Animation/Animation';
 import { IProjectProps } from '../../Interface';
 import style from './SingleProject.module.scss';
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 export const SingleProject = () => {
   const navigate = useNavigate();
+  const language = i18next.language;
+  const {} = useTranslation();
+
   const [status, setStatus] = useState({
     isLoading: false,
     isError: false,
@@ -59,7 +64,7 @@ export const SingleProject = () => {
         <div className="container">
           <div className={style.wrapper}>
             <div className={style.column_left}>
-              <div className={style.title}>{singleProject.title}</div>
+              <div className={style.title}>{language === 'en' ? singleProject.titleRu : singleProject.titleEn}</div>
               <div className={style.links}>
                 <a href={singleProject.link} target="_blank" rel="noopener noreferrer" className={style.link}>
                   GitHub
@@ -70,7 +75,7 @@ export const SingleProject = () => {
                   </a>
                 ) : null}
               </div>
-              <div className={style.descr}>{singleProject.descr}</div>
+              <div className={style.descr}>{language === 'en' ? singleProject.descrRu : singleProject.descrEn}</div>
               <UiButton onClick={() => navigate(-1)} size="sm" variant="outlined">
                 Go back
               </UiButton>

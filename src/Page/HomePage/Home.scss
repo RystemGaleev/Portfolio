@@ -28,9 +28,14 @@
       left: 0px;
     }
   }
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color);
+  }
   &__skills {
     width: 540px;
-    height: 560px;
+    height: 485px;
     &-tag {
       color: var(--accent-color);
       font-weight: 500;
@@ -76,9 +81,6 @@
         bottom: -120px;
         right: -50px;
       }
-    }
-    span {
-      margin-left: 20px;
     }
 
     &-text {
@@ -147,6 +149,9 @@
 @include sm {
   .main {
     padding-top: 0;
+    &__skills {
+      height: 400px;
+    }
     &__wrapper {
       &::before {
         display: none;

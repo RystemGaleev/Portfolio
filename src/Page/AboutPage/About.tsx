@@ -15,6 +15,7 @@ import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { FaFolderOpen, FaReact } from 'react-icons/fa';
 import { SiPrettier, SiGit, SiNodedotjs, SiVite, SiReact } from 'react-icons/si';
 import './About.scss';
+import { useTranslation } from 'react-i18next';
 
 const folderList = [
   {
@@ -38,6 +39,7 @@ const folderList = [
 ];
 
 export const About = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
       <motion.section
@@ -75,10 +77,7 @@ export const About = () => {
                   <motion.div className="about__column-descr" variants={AnimationContainerLong} initial="hidden" animate="show">
                     /* <br />
                     <motion.span variants={AnimationScale}>&lt;h2&gt; About me &lt;/h2&gt;</motion.span>
-                    * My name is Rustem. I am from the Republic of Tatarstan - Russia, the city of Kazan <br />
-                    * Mastered html css js well and continued to work as a freelancer, after which he began collaborating with
-                    several companies on outstaff <br />* After that, I started regularly studying react, redux-toolkit,
-                    typescript, various libraries and animations, and improving my skills
+                    {t('about.aboutDescription')}
                     <motion.span variants={AnimationScale}>&lt;h2&gt; Hard skills &lt;/h2&gt;</motion.span>
                     HTML, CSS, BEM, SCSS ,Cross-browser layout, Adaptive layout, JavaScript , TypeScript, React, Redux-toolkit,
                     React-Router, Framer-motion, Hook-form, i18next, Rest Api, Gulp, Vite, GitHub, Git, Figma, npm, yarn and other

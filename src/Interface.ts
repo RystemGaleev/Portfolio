@@ -2,8 +2,10 @@ export interface IProjectProps {
   site: string | undefined;
   id?: number | string;
   link: string;
-  descr?: string;
+  descrRu?: string;
+  descrEn?: string;
   image: string;
-  title: string;
+  titleRu: string;
+  titleEn: string;
   screens: string[];
 }

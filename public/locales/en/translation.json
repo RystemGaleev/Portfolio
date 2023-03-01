@@ -1,0 +1,17 @@
+{
+  "main": {
+    "subtitle": "Hi! I'm ",
+    "name": "Rustem",
+    "description": "Here you can get acquainted with my portfolio, view my projects, learn about me and my technology stack.",
+    "btnShow": "View stack",
+    "btnHide": "Hide stack"
+  },
+  "about": {
+    "aboutDescription": "My name is Rustem. I am from the Republic of Tatarstan - Russia, the city of Kazan . Mastered html css js well and continued to work as a freelancer, after which he began collaborating with several companies on outstaff . After that, I started regularly studying react, redux-toolkit, typescript, various libraries and animations, and improving my skills"
+  },
+  "navbar": {
+    "home": "_home",
+    "about": "_about me",
+    "projects": "_projects"
+  }
+}

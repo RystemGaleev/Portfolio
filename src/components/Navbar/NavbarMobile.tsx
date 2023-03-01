@@ -1,10 +1,16 @@
 import { NavLink } from 'react-router-dom';
 import style from './NavbarMobile.module.scss';
-import { NavigationLink } from './Navbar';
 import { ThemeSwitch } from '../UI/ThemeSwitch/ThemeSwitch';
 import { socialLinks } from '../../Layout/Footer/Footer';
+import { useTranslation } from 'react-i18next';
 
 export const NavbarMobile = () => {
+  const { t } = useTranslation();
+  const NavigationLink = [
+    { path: '/', title: t('navbar.home') },
+    { path: '/about', title: t('navbar.about') },
+    { path: '/projects', title: t('navbar.projects') },
+  ];
   return (
     <nav className={style.navbar}>
       <div className={style.navigation}>
