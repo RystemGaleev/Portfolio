@@ -4,13 +4,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { Layout } from '../../Layout/Layout';
 import { ScreenProject } from '../ScreenProject/ScreenProject';
 import { UiButton } from '../UI/UiButton/UiButton';
+import { ErrorMessage } from '../UI/ErrorMessage/ErrorMessage';
+import { Loader } from '../UI/Loader/Loader';
 
 import { motion } from 'framer-motion';
 import { PageTranstition, AnimationPage } from '../../Animation/Animation';
 import { IProjectProps } from '../../Interface';
 import style from './SingleProject.module.scss';
-import { ErrorMessage } from '../UI/ErrorMessage/ErrorMessage';
-import { Loader } from '../UI/Loader/Loader';
 
 export const SingleProject = () => {
   const navigate = useNavigate();
@@ -19,9 +19,7 @@ export const SingleProject = () => {
     isError: false,
   });
 
-  const [singleProject, setSingleProject] = useState<IProjectProps | null>(
-    null,
-  );
+  const [singleProject, setSingleProject] = useState<IProjectProps | null>(null);
   let { id } = useParams();
 
   useEffect(() => {
@@ -63,39 +61,23 @@ export const SingleProject = () => {
             <div className={style.column_left}>
               <div className={style.title}>{singleProject.title}</div>
               <div className={style.links}>
-                <a
-                  href={singleProject.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={style.link}
-                >
+                <a href={singleProject.link} target="_blank" rel="noopener noreferrer" className={style.link}>
                   GitHub
                 </a>
                 {singleProject.site ? (
-                  <a
-                    href={singleProject.site}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={style.link}
-                  >
+                  <a href={singleProject.site} target="_blank" rel="noopener noreferrer" className={style.link}>
                     Visit site
                   </a>
                 ) : null}
               </div>
               <div className={style.descr}>{singleProject.descr}</div>
-              <UiButton
-                onClick={() => navigate(-1)}
-                size="sm"
-                variant="outlined"
-              >
+              <UiButton onClick={() => navigate(-1)} size="sm" variant="outlined">
                 Go back
               </UiButton>
             </div>
             <div className={style.column_right}>
               {singleProject.screens &&
-                singleProject.screens.map((screen, index) => (
-                  <ScreenProject key={screen} screen={screen} index={index} />
-                ))}
+                singleProject.screens.map((screen, index) => <ScreenProject key={screen} screen={screen} index={index} />)}
             </div>
           </div>
         </div>

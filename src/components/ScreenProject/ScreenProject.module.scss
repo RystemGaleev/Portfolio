@@ -1,3 +1,4 @@
+@import '../../assets/sass/lib/mixin';
 .img {
   object-fit: cover;
   transition: all 0.4s ease-in-out;
@@ -7,19 +8,10 @@
   cursor: zoom-in;
 }
 
-.wrapper {
-  position: fixed;
+.content {
   width: 400px;
   height: 220px;
   z-index: 0;
-  transition: all 0.4s ease-in-out;
-  &:nth-child(2) {
-    top: 350px;
-  }
-  &:nth-child(3) {
-    top: 600px;
-  }
-
   .normal {
     width: 100%;
     height: 100%;
@@ -36,14 +28,27 @@
   right: 0;
   background: var(--grey-opacity-color);
   z-index: 1000;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.zooming {
+  position: fixed;
+  cursor: zoom-out;
+  top: 50%;
+  left: 50%;
+  width: 70vw;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease-in-out;
+}
 
+@include lg {
+  .content {
+    width: 310px;
+    height: 170px;
+  }
+}
+
+@include md {
   .zooming {
-    position: absolute;
-    cursor: zoom-out;
-    top: 50%;
-    left: 50%;
-    width: 70vw;
-    transform: translate(-50%, -50%);
+    width: 98vw;
   }
 }

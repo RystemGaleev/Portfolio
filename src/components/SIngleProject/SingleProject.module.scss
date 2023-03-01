@@ -1,7 +1,9 @@
+@import '../../assets/sass/lib/mixin';
+
 .project {
   padding-top: 60px;
   overflow: hidden;
-  min-height: 900px;
+  height: 900px;
 }
 .wrapper {
   display: flex;
@@ -19,11 +21,6 @@
   gap: 20px;
 }
 
-// .subtitle {
-//   font-size: 18px;
-//   font-weight: 400;
-//   color: var(--text-color);
-// }
 .title {
   font-size: 36px;
   font-weight: 600;
@@ -51,4 +48,34 @@
   background-color: var(--accent-color);
   border-radius: var(--rad);
   padding: 10px 20px;
+}
+
+@include lg {
+  .column_left {
+    max-width: 350px;
+  }
+}
+@include md {
+  .project {
+    height: unset;
+    padding-bottom: 100px;
+  }
+  .wrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  .column_left {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@include sm {
+  .links {
+    justify-content: space-around;
+  }
+  .descr {
+    line-height: 24px;
+    font-size: 16px;
+  }
 }
