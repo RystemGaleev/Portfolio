@@ -10,6 +10,7 @@ import {
   AnimationPage,
   PageTranstition,
 } from '../../Animation/Animation';
+
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { FaFolderOpen, FaReact } from 'react-icons/fa';
 import { SiPrettier, SiGit, SiNodedotjs, SiVite, SiReact } from 'react-icons/si';

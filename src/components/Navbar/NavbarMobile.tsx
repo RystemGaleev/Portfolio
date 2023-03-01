@@ -24,7 +24,6 @@ export const NavbarMobile = () => {
           </a>
         ))}
       </div>
-
       <ThemeSwitch />
     </nav>
   );
