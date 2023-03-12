@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navbar } from '../../components/Navbar/Navbar';
 import { NavbarMobile } from '../../components/Navbar/NavbarMobile';
 import { BurgerMenu } from '../../components/UI/BurgerMenu/BurgerMenu';
@@ -11,6 +11,12 @@ export const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    const body = document.querySelector('body');
+    if (body !== null) {
+      body.style.overflow = isOpen ? 'hidden' : 'auto';
+    }
+  }, [isOpen]);
   return (
     <>
       <div onClick={toggleMenu} className={isOpen ? `${style.overlay} ${style.active}` : `${style.overlay}`}>

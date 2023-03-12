@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import useMediaQuery from '../../hook/useMediaQuery';
 import { useTranslation } from 'react-i18next';
 
@@ -41,12 +41,20 @@ const tags = [
 
 export const Home = () => {
   const [skills, setSkills] = useState(false);
+  const tagRef = useRef<HTMLInputElement>(null);
   const matches = useMediaQuery('(max-width: 577px)');
   const { t } = useTranslation();
 
   const toggleStack = () => {
     setSkills((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (matches && skills) {
+      tagRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [skills]);
+
   return (
     <Layout>
       <motion.main
@@ -80,7 +88,7 @@ export const Home = () => {
               </div>
             </motion.div>
             {skills && (
-              <div className="main__skills">
+              <div ref={tagRef} className="main__skills">
                 <TagSphere
                   className="main__skills-tag"
                   fullHeight={true}
