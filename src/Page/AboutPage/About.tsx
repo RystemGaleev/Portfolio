@@ -80,8 +80,8 @@ export const About = () => {
                     {t('about.aboutDescription')}
                     <motion.span variants={AnimationScale}>&lt;h2&gt; Hard skills &lt;/h2&gt;</motion.span>
                     HTML, CSS, BEM, SCSS ,Cross-browser layout, Adaptive layout, JavaScript , TypeScript, React, Redux-toolkit,
-                    React-Router, Framer-motion, Hook-form, i18next, Rest Api, Gulp, Vite, GitHub, Git, Figma, npm, yarn and other
-                    library
+                    React-query, React-Router, Framer-motion, Hook-form, i18next, Rest Api, Gulp, Vite, GitHub, Git, Figma, npm,
+                    yarn and other library
                     <motion.span variants={AnimationScale}>&lt;h2&gt; Soft skills &lt;/h2&gt;</motion.span>
                     {t('about.softSkills')}
                     <br /> */
