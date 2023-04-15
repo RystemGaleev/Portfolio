@@ -3,7 +3,6 @@ import style from './ExperienceCounter.module.scss';
 import moment from 'moment';
 import pluralize from 'plural-ru';
 import { useTranslation } from 'react-i18next';
-import { IoCalendarNumberOutline, IoLogoReact, IoSchoolOutline, IoTimeOutline } from 'react-icons/io5';
 
 export const ExperienceCounter = () => {
   const { t } = useTranslation();
@@ -39,7 +38,6 @@ export const ExperienceCounter = () => {
     setExperience({ yearsString, monthsString, weeksString, daysString });
   }, [currentDate, startDate, t]);
 
-  console.log(experience);
   return (
     <div className={style.experienceBlock}>
       <div className={style.experience}>{experience.yearsString}</div>

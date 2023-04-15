@@ -1,8 +1,11 @@
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Markup } from '../../components/Markup/Markup';
 import { MFolder } from '../../components/Folder/Folder';
+import { ExperienceCounter } from '../../components/UI/ExperienceCounter/ExperienceCounter';
+import { MyWork } from '../../components/MyWork/MyWork';
+import { ScrollButton } from '../../components/ScrollButton/ScrollButton';
 import { Layout } from '../../Layout/Layout';
-import { motion } from 'framer-motion';
 
 import {
   AnimationContainerLong,
@@ -15,9 +18,8 @@ import {
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { FaFolderOpen, FaReact } from 'react-icons/fa';
 import { SiPrettier, SiGit, SiNodedotjs, SiVite, SiReact } from 'react-icons/si';
+
 import './About.scss';
-import { ExperienceCounter } from '../../components/UI/ExperienceCounter/ExperienceCounter';
-import { MyWork } from '../../components/MyWork/MyWork';
 import { IMyWorks } from '../../types';
 
 const folderList = [
@@ -149,6 +151,7 @@ export const About = () => {
           </div>
         </div>
       </motion.section>
+      <ScrollButton />
     </Layout>
   );
 };
