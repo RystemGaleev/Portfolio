@@ -879,6 +879,11 @@ mime-types@^2.1.12:
   dependencies:
     mime-db "1.52.0"
 
+moment@^2.29.4:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
+
 ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
@@ -920,6 +925,11 @@ picomatch@^2.0.4, picomatch@^2.2.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
+
+plural-ru@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/plural-ru/-/plural-ru-2.0.2.tgz#5fda445d7a7f83a94020e3b81266c873a85eebb4"
+  integrity sha512-zmQv/tMG7fjF8r8JJ2U1p9dP1RgQ54RnP9nOM9dJHlcWU4mVmesKU9RgouxvyrCIU7lwOtGBYJ6cBa00UlzUZQ==
 
 postcss@^8.4.21:
   version "8.4.21"

@@ -1,0 +1,154 @@
+@import '../../assets/sass/lib/mixin';
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  height: 480px;
+  margin-top: 100px;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+.block {
+  position: relative;
+  width: calc(50% - 30px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  &.reverse {
+    text-align: right;
+    .subtitle {
+      max-width: 400px;
+      margin: 0 0 0 auto;
+    }
+  }
+}
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+.date {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  font-family: 'JetBrains Mono', monospace;
+}
+.work {
+  position: relative;
+  width: calc(50% - 30px);
+  background-color: #2e2e2e;
+  padding: 25px 20px;
+  border-radius: var(--rad);
+  span {
+    font-size: 18px;
+    font-weight: 600;
+    width: max-content;
+    display: inline;
+    border-bottom: 1px solid var(--accent-color);
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+.dutiesList {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  list-style: none;
+  color: var(--white-color);
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 25px;
+  color: var(--white-color);
+}
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.dutie {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--white-color);
+  padding-left: 20px;
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: var(--accent-color);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+@include xl {
+  .wrapper {
+    height: 540px;
+  }
+}
+@include lg {
+  .wrapper {
+    flex-direction: column;
+    margin-top: 70px;
+    justify-content: unset;
+    gap: 40px;
+    width: calc(100% - 60px);
+    height: 650px;
+
+    &.reverse {
+      flex-direction: column;
+    }
+    .work {
+      width: 100%;
+      order: 2;
+    }
+    .block {
+      width: 100%;
+      text-align: right;
+      .subtitle {
+        max-width: 400px;
+        margin: 0 0 0 auto;
+      }
+      &.reverse {
+        flex-direction: column;
+        margin: unset;
+      }
+    }
+  }
+}
+
+@include sm {
+  .wrapper {
+    width: 100%;
+    height: unset;
+    .work {
+      padding: 20px 12px;
+      span {
+        font-size: 16px;
+      }
+      .title {
+        font-size: 22px;
+      }
+      .dutie {
+        font-size: 14px;
+      }
+    }
+    .block {
+      text-align: center;
+      .date {
+        font-size: 16px;
+      }
+    }
+  }
+}

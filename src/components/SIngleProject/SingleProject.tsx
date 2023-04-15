@@ -10,7 +10,7 @@ import { Loader } from '../UI/Loader/Loader';
 
 import { motion } from 'framer-motion';
 import { PageTranstition, AnimationPage } from '../../Animation/Animation';
-import { IProjectProps } from '../../Interface';
+import { IProjectProps } from '../../types';
 import style from './SingleProject.module.scss';
 
 export const SingleProject = () => {

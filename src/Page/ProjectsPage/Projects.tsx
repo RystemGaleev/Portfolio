@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from '../../hook/reduxHook';
+import { useAppDispatch, useAppSelector } from '../../hook/useRedux';
 import { useEffect } from 'react';
 import { fetchProjects, STATUSES } from '../../Redux/ProjectsSlice';
 import { Loader } from '../../components/UI/Loader/Loader';

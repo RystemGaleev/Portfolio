@@ -16,6 +16,9 @@ import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { FaFolderOpen, FaReact } from 'react-icons/fa';
 import { SiPrettier, SiGit, SiNodedotjs, SiVite, SiReact } from 'react-icons/si';
 import './About.scss';
+import { ExperienceCounter } from '../../components/UI/ExperienceCounter/ExperienceCounter';
+import { MyWork } from '../../components/MyWork/MyWork';
+import { IMyWorks } from '../../types';
 
 const folderList = [
   {
@@ -40,6 +43,48 @@ const folderList = [
 
 export const About = () => {
   const { t } = useTranslation();
+  const MY_WORKS: IMyWorks[] = [
+    {
+      id: 1,
+      title: t('experience.marketplace.title'),
+      subtitle: t('experience.marketplace.subtitle'),
+      stack: t('experience.marketplace.etc'),
+      date: t('experience.marketplace.date'),
+      dutiesList: [
+        t('experience.marketplace.dutiesList.dutie1'),
+        t('experience.marketplace.dutiesList.dutie2'),
+        t('experience.marketplace.dutiesList.dutie3'),
+        t('experience.marketplace.dutiesList.dutie4'),
+      ],
+    },
+    {
+      id: 2,
+      title: t('experience.startup.title'),
+      subtitle: t('experience.startup.subtitle'),
+      stack: t('experience.startup.etc'),
+      date: t('experience.startup.date'),
+      dutiesList: [
+        t('experience.startup.dutiesList.dutie1'),
+        t('experience.startup.dutiesList.dutie2'),
+        t('experience.startup.dutiesList.dutie3'),
+        t('experience.startup.dutiesList.dutie4'),
+        t('experience.startup.dutiesList.dutie5'),
+      ],
+    },
+    {
+      id: 3,
+      title: t('experience.moneyForLeads.title'),
+      subtitle: t('experience.moneyForLeads.subtitle'),
+      stack: t('experience.moneyForLeads.etc'),
+      date: t('experience.moneyForLeads.date'),
+      dutiesList: [
+        t('experience.moneyForLeads.dutiesList.dutie1'),
+        t('experience.moneyForLeads.dutiesList.dutie2'),
+        t('experience.moneyForLeads.dutiesList.dutie3'),
+        t('experience.moneyForLeads.dutiesList.dutie4'),
+      ],
+    },
+  ];
   return (
     <Layout>
       <motion.section
@@ -75,7 +120,6 @@ export const About = () => {
                 <Markup />
                 <div className="about__column">
                   <motion.div className="about__column-descr" variants={AnimationContainerLong} initial="hidden" animate="show">
-                    /* <br />
                     <motion.span variants={AnimationScale}>&lt;h2&gt; About me &lt;/h2&gt;</motion.span>
                     {t('about.aboutDescription')}
                     <motion.span variants={AnimationScale}>&lt;h2&gt; Hard skills &lt;/h2&gt;</motion.span>
@@ -84,10 +128,23 @@ export const About = () => {
                     yarn and other library
                     <motion.span variants={AnimationScale}>&lt;h2&gt; Soft skills &lt;/h2&gt;</motion.span>
                     {t('about.softSkills')}
-                    <br /> */
                   </motion.div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="about__experience">
+            <h2 className="about__experience-title">Опыт работы</h2>
+            <ExperienceCounter />
+            <div className="about__experience-wrapper">
+              <div className="about__experience-line">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              {MY_WORKS.map((experience, index) => (
+                <MyWork {...experience} index={index} />
+              ))}
             </div>
           </div>
         </div>

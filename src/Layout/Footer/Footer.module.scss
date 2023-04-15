@@ -7,6 +7,7 @@
   height: 48px;
   border-top: 1px solid var(--grey-opacity-color);
   border-bottom: 1px solid var(--grey-opacity-color);
+  z-index: 999;
 }
 .wrapper {
   display: flex;

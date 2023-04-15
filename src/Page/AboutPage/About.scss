@@ -3,9 +3,76 @@
   &__wrapper {
     display: flex;
     align-items: flex-start;
-    height: 884px;
-
     overflow: hidden;
+    border-bottom: 1px solid var(--grey-opacity-color);
+  }
+  &__experience {
+    position: relative;
+    border-color: var(--grey-opacity-color);
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+
+    &-line {
+      position: absolute;
+      background-color: var(--accent-color);
+      height: 100%;
+      width: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 30;
+      span {
+        position: absolute;
+        content: '';
+        width: 18px;
+        height: 18px;
+        background-color: var(--accent-color);
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 60;
+        outline: 8px solid var(--detail-color);
+        &:first-child {
+          top: 104px;
+        }
+        &:nth-child(2) {
+          top: 684px;
+        }
+        &:nth-child(3) {
+          top: 1264px;
+        }
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          outline: 2px solid var(--accent-color);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+        }
+      }
+    }
+    &-wrapper {
+      position: relative;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 1980px;
+    }
+    &-title {
+      background-color: var(--accent-color);
+      width: 100%;
+      display: block;
+      color: var(--detail-color);
+      padding: 5px 10px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'JetBrains Mono', monospace;
+    }
   }
   &__header {
     position: relative;
@@ -42,21 +109,24 @@
         width: 100%;
         display: block;
         color: var(--detail-color);
-        padding: 0 10px;
+        padding: 5px 10px;
         font-weight: 500;
         text-align: center;
+        margin: 10px 0;
+        font-family: 'JetBrains Mono', monospace;
       }
     }
   }
   &__column-left {
-    height: 884px;
+    height: 980px;
     position: relative;
     width: 230px;
-    border: 1px solid var(--grey-opacity-color);
+    border-left: 1px solid var(--grey-opacity-color);
+    border-right: 1px solid var(--grey-opacity-color);
     padding: 10px 14px;
   }
   &__column-right {
-    height: 884px;
+    height: 980px;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -66,7 +136,7 @@
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    padding-left: 20px;
+    padding: 10px 0 10px 20px;
   }
   &__title {
     position: absolute;
@@ -93,24 +163,61 @@
   }
 }
 
+@include xl {
+  .about {
+    &__experience {
+      &-wrapper {
+        min-height: 2050px;
+      }
+    }
+  }
+}
 @include lg {
   .about {
+    &__experience {
+      &-wrapper {
+        min-height: 2250px;
+      }
+      &-line {
+        right: 30px;
+        left: auto;
+        transform: unset;
+        span {
+          &:first-child {
+            top: 72px;
+          }
+          &:nth-child(2) {
+            top: 790px;
+          }
+          &:nth-child(3) {
+            top: 1512px;
+          }
+        }
+      }
+    }
     &__wrapper {
-      height: 1100px;
+      height: 1250px;
     }
     &__column-right {
-      height: 1100px;
+      height: 1250px;
     }
     &__column-left {
-      height: 1100px;
+      height: 1250px;
+    }
+    &__column-descr {
+      font-size: 16px;
     }
   }
 }
 @include md {
   .about {
+    &__experience {
+      &-wrapper {
+        min-height: 2350px;
+      }
+    }
     &__wrapper {
       height: unset;
-      padding-bottom: 48px;
     }
     &__column-right {
       height: unset;
@@ -131,6 +238,16 @@
 }
 @include sm {
   .about {
+    &__experience {
+      &-wrapper {
+        padding: 0 10px;
+        min-height: unset;
+        padding-bottom: 100px;
+      }
+      &-line {
+        display: none;
+      }
+    }
     &__column-descr {
       font-size: 16px;
     }

@@ -9,3 +9,12 @@ export interface IProjectProps {
   titleEn: string;
   screens: string[];
 }
+
+export interface IMyWorks {
+  id: number;
+  title: string;
+  subtitle: string;
+  dutiesList: string[];
+  stack: string;
+  date: string;
+}

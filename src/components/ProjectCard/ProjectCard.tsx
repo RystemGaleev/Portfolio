@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { UiButton } from '../UI/UiButton/UiButton';
 import { motion } from 'framer-motion';
-import { IProjectProps } from '../../Interface';
+import { IProjectProps } from '../../types';
 import style from './ProjectCard.module.scss';
 
 export const ProjectCard = forwardRef<HTMLDivElement, IProjectProps>(({ id, titleRu, titleEn, image }, ref) => {

@@ -1,24 +1,23 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { IProjectProps } from '../Interface';
+import { IProjectProps } from '../types';
 
 interface ProjectState {
   projects: IProjectProps[];
   status: string;
 }
 
-export const fetchProjects = createAsyncThunk<
-  IProjectProps[],
-  undefined,
-  { rejectValue: string }
->('projects/fetchProjects', async (_, { rejectWithValue }) => {
-  const response = await fetch(import.meta.env.VITE_PROJECTS_API);
-  if (!response.ok) {
-    return rejectWithValue('sever Error!');
-  }
-  const data: IProjectProps[] = await response.json();
+export const fetchProjects = createAsyncThunk<IProjectProps[], undefined, { rejectValue: string }>(
+  'projects/fetchProjects',
+  async (_, { rejectWithValue }) => {
+    const response = await fetch(import.meta.env.VITE_PROJECTS_API);
+    if (!response.ok) {
+      return rejectWithValue('sever Error!');
+    }
+    const data: IProjectProps[] = await response.json();
 
-  return data;
-});
+    return data;
+  },
+);
 
 export const STATUSES = Object.freeze({
   IDLE: 'idle',

@@ -1,0 +1,43 @@
+@import '../../../assets/sass/lib/mixin';
+
+.experienceBlock {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid var(--accent-color);
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: var(--rad);
+}
+.experience {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+@include lg {
+  .experienceBlock {
+    border: none;
+    border-radius: unset;
+    border-bottom: 2px solid var(--accent-color);
+    border-top: 2px solid var(--accent-color);
+    max-width: 100%;
+  }
+}
+@include md {
+  .experience {
+    font-size: 20px;
+  }
+}
+@include sm {
+  .experienceBlock {
+    padding: 10px 12px;
+  }
+  .experience {
+    font-size: 18px;
+    text-align: center;
+  }
+}

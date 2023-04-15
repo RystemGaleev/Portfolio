@@ -7,7 +7,7 @@
     "btnHide": "Hide stack"
   },
   "about": {
-    "aboutDescription": "My name is Rustem. I am from the Republic of Tatarstan - Russia, the city of Kazan. He started his career in IT as a freelance web designer, worked for about a year, got acquainted with the layout, liked it. He began to deepen, continued to work freelance, creating a layout and making it himself, then completely switched to fronted, began to cooperate with several companies. There I was engaged in layout and developed projects on react, such as online stores, blogs, multi-pages, landing pages and many other interesting projects, at the moment I continue to improve, study new technologies.",
+    "aboutDescription": "My name is Rustem. I live in Kazan, Republic of Tatarstan, Russia. I started my career in IT as a freelance web designer, after that I started to study layout, delve into writing code, I liked it and I realized that I want to continue doing this. I switched completely to the frontend, began to master new technologies, found my first job, where I rose well in skill, gained experience as a team worker. He also worked on team projects, such as online stores, startups, small businesses, landing pages, corporate websites. Currently, I continue to improve my knowledge, this helps me write more efficient, understandable and easily maintainable code. I strive to keep abreast of the latest trends and developments in the IT world, so I constantly study new technologies and approaches to development. I'm also open to interesting offers, whether it's a full-time job or project work. You can contact me, always in touch :)",
     "softSkills": "Organization and planning of working hours, analytical thinking, the desire to learn and develop, communication skills, ability to work in a team, stress tolerance"
   },
   "notFound": {
@@ -21,5 +21,68 @@
   "buttons": {
     "cardBtn": "View project",
     "backBtn": "Back"
+  },
+  "roadmap": {
+    "years": {
+      "years1": "%d year",
+      "years2": "%d years",
+      "years3": "%d years"
+    },
+    "months": {
+      "months1": "%d month",
+      "months2": "%d months",
+      "months3": "%d months"
+    },
+    "weeks": {
+      "weeks1": "%d week",
+      "weeks2": "%d weeks",
+      "weeks3": "%d weeks"
+    },
+    "days": {
+      "days1": "%d day",
+      "days2": "%d days",
+      "days3": "%d days"
+    }
+  },
+  "experience": {
+    "responsibilities": "Job responsibilities:",
+    "stack": "Technologies used:",
+    "marketplace": {
+      "title": "Marketplace",
+      "subtitle": "Project, team work on the development of the marketplace",
+      "etc": "React, mobx, typescript, scss, antd and other third-party libraries",
+      "date": "From December 2022 to April 2023",
+      "dutiesList": {
+        "dutie1": "Administrative panel , payment connection, payment by crypt",
+        "dutie2": "Writing application logic",
+        "dutie3": "Refactoring the code to improve its optimization and maintainability",
+        "dutie4": "Layout of an adaptive and cross-browser site according to the layout"
+      }
+    },
+    "startup": {
+      "title": "Startup",
+      "subtitle": "Project, team work on the project of the site, which provides the possibility of online registration for a wide range of services",
+      "etc": "React, effector, typescript, scss , antd, jwt, git and other third-party libraries",
+      "date": "From August 2022 to December 2022",
+      "dutiesList": {
+        "dutie1": "Creating a design for a project",
+        "dutie2": "Writing application logic",
+        "dutie3": "Refactoring the code to improve its optimization and maintainability",
+        "dutie4": "Layout of an adaptive and cross-browser site according to the layout",
+        "dutie5": "Working with a large number of API"
+      }
+    },
+    "moneyForLeads": {
+      "title": "MoneyForLeads",
+      "subtitle": "Моя первая работа, где я был изначально в роли верстальщика, потом полностью перешел на позицию frontend разработчика, выполнял различные проекты",
+      "etc": "HTML5, SCSS, JS, i18next, React, Redux-toolkit, git, gitLab, youTrack and other third-party libraries",
+      "date": "From May 2021 to August 2022",
+      "dutiesList": {
+        "dutie1": "Participation in planning and holding meetings with the development team",
+        "dutie2": "Refactoring the code to improve its optimization and maintainability",
+        "dutie3": "Layout of an adaptive and cross-browser site according to the layout",
+        "dutie4": "Collaboration with designers, backends, product managers"
+      }
+    }
   }
 }

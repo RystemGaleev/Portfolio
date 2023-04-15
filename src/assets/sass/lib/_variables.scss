@@ -7,7 +7,7 @@
   --grey-opacity-color: rgb(128, 128, 128, 0.3);
   --red-opacity-color: rgba(210, 49, 49, 0.8);
   --black-opacity-color: rgb(24, 26, 29, 0.4);
-
+  --white-opacity-color: rgba(219, 219, 219, 0.8);
   --rad: 6px;
 }
 body[data-theme='light'] {
@@ -16,6 +16,7 @@ body[data-theme='light'] {
   --detail-color: var(--black-color);
   --accent-color: var(--yellow-color);
   --opacity-color: var(--grey-opacity-color);
+  --opacity-contrast: var(--black-opacity-color);
 }
 body[data-theme='dark'] {
   --bg-color: var(--white-color);
@@ -23,4 +24,5 @@ body[data-theme='dark'] {
   --detail-color: var(--white-color);
   --accent-color: var(--red-color);
   --opacity-color: var(--black-opacity-color);
+  --opacity-contrast: var(--white-opacity-color);
 }
