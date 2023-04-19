@@ -1,4 +1,5 @@
 @import '../../assets/sass/lib/mixin';
+
 .about {
   &__wrapper {
     display: flex;
@@ -19,7 +20,7 @@
       width: 3px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 30;
+      z-index: 32;
       span {
         position: absolute;
         content: '';
