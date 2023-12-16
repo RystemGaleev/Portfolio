@@ -187,7 +187,7 @@ export const About = () => {
                 <span></span>
               </div>
               {MY_WORKS.map((experience, index) => (
-                <MyWork {...experience} index={index} />
+                <MyWork key={experience.id} {...experience} index={index} />
               ))}
             </div>
           </div>

@@ -1,11 +1,8 @@
 @import '../../assets/sass/lib/mixin';
-<<<<<<< Updated upstream
-=======
 $colum-height: 1350px;
 $colum-height-lg: 1550px;
 $colum-height-xl: 1750px;
-$colum-height-sm: 2050px;
->>>>>>> Stashed changes
+$colum-height-sm: 2210px;
 
 .about {
   &__wrapper {
@@ -191,7 +188,7 @@ $colum-height-sm: 2050px;
     }
     &__experience {
       &-wrapper {
-        min-height: 2050px;
+        min-height: 2210px;
       }
     }
   }
