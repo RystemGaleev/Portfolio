@@ -14,7 +14,7 @@ export interface IMyWorks {
   id: number;
   title: string;
   subtitle: string;
-  dutiesList: string[];
+  dutiesList?: string[];
   stack: string;
   date: string;
 }

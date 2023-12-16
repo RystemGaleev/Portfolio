@@ -7,7 +7,28 @@
     "btnHide": "Hide stack"
   },
   "about": {
-    "aboutDescription": "My name is Rustem. I live in Kazan, Republic of Tatarstan, Russia. I started my career in IT as a freelance web designer, after that I started to study layout, delve into writing code, I liked it and I realized that I want to continue doing this. I switched completely to the frontend, began to master new technologies, found my first job, where I rose well in skill, gained experience as a team worker. He also worked on team projects, such as online stores, startups, small businesses, landing pages, corporate websites. Currently, I continue to improve my knowledge, this helps me write more efficient, understandable and easily maintainable code. I strive to keep abreast of the latest trends and developments in the IT world, so I constantly study new technologies and approaches to development. I'm also open to interesting offers, whether it's a full-time job or project work. You can contact me, always in touch :)",
+    "aboutDescription": "Hello! My name is Rustem, I am a frontend developer. Over the three years of my web development career, I have successfully implemented many projects, starting with creating complex user interfaces from scratch, as well as supporting and refining existing ones. Efficient use of various libraries to ensure scalability and application state management.",
+    "aboutUi": "Component Creation: Developed a UI kit with high-level components and their integration to achieve maximum performance and ease of use.",
+    "aboutSeo": "SEO: Knowledge and experience in SEO implementation, including the correct use of meta tags, optimization of headlines and other factors to increase the visibility of projects in search engines.",
+    "aboutOptimization": "Optimization and performance: actively sought to create not only beautiful, but also high-performance user interfaces. Working with caching, memoization, lazy loading.",
+    "aboutDesign": "Adaptive design: Working with various devices and browsers, creating adaptive interfaces that ensure the same high quality of visualization on all devices.",
+    "aboutApi": "Working with the API: Integration with various external APIs to receive and update data. Ensuring effective interaction with the server",
+    "hardSkills": {
+      "stack": {
+        "skills1": "React, Next.js, Gatsby, JavaScript, TypeScript",
+        "skills2": "HTML, CSS, SCSS",
+        "skills3": "Axios, GraphQL, REST API",
+        "skills4": "React Hook Form, Formik, Yup, Zod",
+        "skills5": "Adaptive Layout, Cross-Browser Layout, Mobile first",
+        "skills6": "Redux Toolkit, Material-UI, Radix UI, Framer Motion",
+        "skills7": "Tanstack Query, i18next,  clsx, Recharts, dayjs, react-router-dom, etc."
+      },
+      "clean": "To ensure the purity and standard of the code, the projects use tools: ESLint / Prettier",
+      "config": "Set up the configuration for Storybook и Webpack.",
+      "git": "Working with Git / GitHub / GitLab",
+      "management": "Managing and working with tasks in YouTrack and Trello",
+      "figma": "Experience working with figma as a web designer"
+    },
     "softSkills": "Organization and planning of working hours, analytical thinking, the desire to learn and develop, communication skills, ability to work in a team, stress tolerance"
   },
   "notFound": {
@@ -47,6 +68,13 @@
   "experience": {
     "responsibilities": "Job responsibilities:",
     "stack": "Technologies used:",
+    "bank": {
+      "title": "Software engineer at the Sovcombank",
+      "subtitle": "Teamwork in the development and improvement of the bank's products",
+      "etc": "Engaged in creating user interfaces and much more",
+      "date": "From April 2023 to the present",
+      "dutiesList": { "dutie1": "NDA" }
+    },
     "marketplace": {
       "title": "Marketplace",
       "subtitle": "Project, team work on the development of the marketplace",

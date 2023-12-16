@@ -10,7 +10,7 @@ import {
   AnimationRightX,
   AnimationLeftX,
   AnimationContainer,
-  PageTranstition,
+  PageTransition,
   AnimationPage,
   AnimationRotate,
 } from '../../Animation/Animation';
@@ -61,7 +61,7 @@ export const Home = () => {
         initial="exit"
         animate="show"
         exit="exit"
-        transition={PageTranstition}
+        transition={PageTransition}
         variants={AnimationPage}
         className="main"
       >

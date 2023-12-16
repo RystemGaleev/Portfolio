@@ -9,7 +9,7 @@ import { ErrorMessage } from '../UI/ErrorMessage/ErrorMessage';
 import { Loader } from '../UI/Loader/Loader';
 
 import { motion } from 'framer-motion';
-import { PageTranstition, AnimationPage } from '../../Animation/Animation';
+import { PageTransition, AnimationPage } from '../../Animation/Animation';
 import { IProjectProps } from '../../types';
 import style from './SingleProject.module.scss';
 
@@ -56,7 +56,7 @@ export const SingleProject = () => {
         initial="exit"
         animate="show"
         exit="exit"
-        transition={PageTranstition}
+        transition={PageTransition}
         variants={AnimationPage}
         className={style.project}
       >

@@ -6,7 +6,7 @@ import { ErrorMessage } from '../../components/UI/ErrorMessage/ErrorMessage';
 
 import {
   AnimationPage,
-  PageTranstition,
+  PageTransition,
   AnimationProjectContainer,
   AnimationProjectCardLeft,
   AnimationProjectCardRight,
@@ -38,7 +38,7 @@ export const Projects = () => {
         initial="exit"
         animate="show"
         exit="exit"
-        transition={PageTranstition}
+        transition={PageTransition}
         variants={AnimationPage}
         className="projects"
       >

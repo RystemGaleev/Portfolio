@@ -13,7 +13,7 @@ import {
   AnimationScale,
   AnimationScaleLeftX,
   AnimationPage,
-  PageTranstition,
+  PageTransition,
 } from '../../Animation/Animation';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { FaFolderOpen, FaReact } from 'react-icons/fa';
@@ -48,6 +48,14 @@ export const About = () => {
   const MY_WORKS: IMyWorks[] = [
     {
       id: 1,
+      title: t('experience.bank.title'),
+      subtitle: t('experience.bank.subtitle'),
+      stack: t('experience.bank.etc'),
+      date: t('experience.bank.date'),
+      dutiesList: [t('experience.bank.dutiesList.dutie1')],
+    },
+    {
+      id: 2,
       title: t('experience.marketplace.title'),
       subtitle: t('experience.marketplace.subtitle'),
       stack: t('experience.marketplace.etc'),
@@ -60,7 +68,7 @@ export const About = () => {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: t('experience.startup.title'),
       subtitle: t('experience.startup.subtitle'),
       stack: t('experience.startup.etc'),
@@ -74,7 +82,7 @@ export const About = () => {
       ],
     },
     {
-      id: 3,
+      id: 4,
       title: t('experience.moneyForLeads.title'),
       subtitle: t('experience.moneyForLeads.subtitle'),
       stack: t('experience.moneyForLeads.etc'),
@@ -93,7 +101,7 @@ export const About = () => {
         initial="exit"
         animate="show"
         exit="exit"
-        transition={PageTranstition}
+        transition={PageTransition}
         variants={AnimationPage}
         className="about"
       >
@@ -105,7 +113,7 @@ export const About = () => {
                 src &gt; pages &gt; about
               </h2>
               <motion.div variants={AnimationContainerFast} initial="hidden" animate="show" className="about__folders">
-                {folderList.map((item, index) => (
+                {folderList?.map((item, index) => (
                   <MFolder variants={AnimationScaleLeftX} custom={index} key={item.label} {...item} />
                 ))}
               </motion.div>
@@ -124,10 +132,44 @@ export const About = () => {
                   <motion.div className="about__column-descr" variants={AnimationContainerLong} initial="hidden" animate="show">
                     <motion.span variants={AnimationScale}>&lt;h2&gt; About me &lt;/h2&gt;</motion.span>
                     {t('about.aboutDescription')}
+                    <div className="about__divider" />
+                    {t('about.aboutUi')}
+                    <div className="about__divider" />
+                    {t('about.aboutSeo')}
+                    <div className="about__divider" />
+                    {t('about.aboutOptimization')}
+                    <div className="about__divider" />
+                    {t('about.aboutDesign')}
+                    <div className="about__divider" />
+                    {t('about.aboutApi')}
+                    <div className="about__divider" />
                     <motion.span variants={AnimationScale}>&lt;h2&gt; Hard skills &lt;/h2&gt;</motion.span>
-                    HTML, CSS, BEM, SCSS ,Cross-browser layout, Adaptive layout, JavaScript , TypeScript, React, Redux-toolkit,
-                    React-query, React-Router, Framer-motion, Hook-form, i18next, Rest Api, Gulp, Vite, GitHub, Git, Figma, npm,
-                    yarn and other library
+                    {t('about.hardSkills.stack.skills1')}
+                    <div className="about__divider" />
+                    {t('about.hardSkills.stack.skills2')}
+                    <div className="about__divider" />
+                    {t('about.hardSkills.stack.skills3')}
+                    <div className="about__divider" />
+                    {t('about.hardSkills.stack.skills4')}
+                    <div className="about__divider" />
+                    {t('about.hardSkills.stack.skills5')}
+                    <div className="about__divider" />
+                    {t('about.hardSkills.stack.skills6')}
+                    <div className="about__divider" />
+                    {t('about.hardSkills.stack.skills7')}
+                    <div className="about__divider" />
+
+                    {t('about.hardSkills.clean')}
+                    <div className="about__divider" />
+                    {t('about.hardSkills.config')}
+                    <div className="about__divider" />
+                    {t('about.hardSkills.git')}
+                    <div className="about__divider" />
+                    {t('about.hardSkills.management')}
+                    <div className="about__divider" />
+                    {t('about.hardSkills.figma')}
+                    <div className="about__divider" />
+
                     <motion.span variants={AnimationScale}>&lt;h2&gt; Soft skills &lt;/h2&gt;</motion.span>
                     {t('about.softSkills')}
                   </motion.div>

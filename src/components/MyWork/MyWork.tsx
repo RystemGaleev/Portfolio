@@ -17,7 +17,7 @@ export const MyWork: FC<IMyWorksProps> = ({ title, subtitle, dutiesList, stack, 
 
         <ul className={style.dutiesList}>
           <span>{t('experience.responsibilities')}</span>
-          {dutiesList.map((dutie) => (
+          {dutiesList?.map((dutie) => (
             <li key={dutie} className={style.dutie}>
               {dutie}
             </li>

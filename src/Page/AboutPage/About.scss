@@ -1,4 +1,11 @@
 @import '../../assets/sass/lib/mixin';
+<<<<<<< Updated upstream
+=======
+$colum-height: 1350px;
+$colum-height-lg: 1550px;
+$colum-height-xl: 1750px;
+$colum-height-sm: 2050px;
+>>>>>>> Stashed changes
 
 .about {
   &__wrapper {
@@ -6,6 +13,9 @@
     align-items: flex-start;
     overflow: hidden;
     border-bottom: 1px solid var(--grey-opacity-color);
+    @media (min-width: 360px) and (max-width: 450px) {
+      height: $colum-height-sm !important;
+    }
   }
   &__experience {
     position: relative;
@@ -119,7 +129,7 @@
     }
   }
   &__column-left {
-    height: 980px;
+    height: $colum-height;
     position: relative;
     width: 230px;
     border-left: 1px solid var(--grey-opacity-color);
@@ -127,11 +137,15 @@
     padding: 10px 14px;
   }
   &__column-right {
-    height: 980px;
+    height: $colum-height;
     display: flex;
     flex-direction: column;
     flex: 1;
     border-right: 1px solid var(--grey-opacity-color);
+    border-left: 1px solid var(--grey-opacity-color);
+    @media (min-width: 360px) and (max-width: 450px) {
+      height: $colum-height-sm !important;
+    }
   }
   &__block-descr {
     display: flex;
@@ -166,6 +180,15 @@
 
 @include xl {
   .about {
+    &__column-right {
+      height: $colum-height-lg;
+    }
+    &__column-left {
+      height: $colum-height-lg;
+    }
+    &__block-descr {
+      padding: 0 10px;
+    }
     &__experience {
       &-wrapper {
         min-height: 2050px;
@@ -197,13 +220,18 @@
       }
     }
     &__wrapper {
-      height: 1250px;
+      height: $colum-height;
     }
     &__column-right {
-      height: 1250px;
+      height: $colum-height;
     }
     &__column-left {
-      height: 1250px;
+      height: unset;
+      display: none;
+    }
+
+    &__header {
+      border-left: 1px solid var(--grey-opacity-color);
     }
     &__column-descr {
       font-size: 16px;
@@ -212,28 +240,16 @@
 }
 @include md {
   .about {
+    &__wrapper {
+      height: $colum-height-xl;
+    }
+    &__column-right {
+      height: $colum-height-xl;
+    }
     &__experience {
       &-wrapper {
         min-height: 2350px;
       }
-    }
-    &__wrapper {
-      height: unset;
-    }
-    &__column-right {
-      height: unset;
-    }
-    &__column-left {
-      height: unset;
-    }
-    &__column-left {
-      display: none;
-    }
-    &__block-descr {
-      border-left: 1px solid var(--grey-opacity-color);
-    }
-    &__header {
-      border-left: 1px solid var(--grey-opacity-color);
     }
   }
 }
@@ -251,9 +267,6 @@
     }
     &__column-descr {
       font-size: 16px;
-    }
-    &__block-descr {
-      padding: 0;
     }
   }
 }

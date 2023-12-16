@@ -88,7 +88,7 @@ const AnimationPage = {
     opacity: 0,
   },
 };
-const PageTranstition = {
+const PageTransition = {
   duration: 0.3,
   ease: 'easeInOut',
 };
@@ -102,7 +102,7 @@ export {
   AnimationScale,
   AnimationScaleLeftX,
   AnimationPage,
-  PageTranstition,
+  PageTransition,
   AnimationContainerFast,
   AnimationProjectContainer,
   AnimationProjectCardLeft,
